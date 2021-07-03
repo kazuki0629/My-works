@@ -129,12 +129,17 @@ def Cubic_fun (a,b,c,d,x_low,x_high):
         else :
             plt.scatter(dx2, ev2)
             plt.scatter(dx1, ev1) 
-
+            
     plt.scatter(ddx,ddy) 
+    
+    if D > 0 :
+        plt.legend(['function','Maxima','Minima','Inflection point'])
+    else :
+        plt.legend(['function','Inflection point'])
+        
     plt.title('Cubic-function-graph')
     plt.xlabel('x')
     plt.ylabel('y')
-    plt.legend(['function','Maxima','Minima','Inflection point'])
     plt.xlim(x_low -1, x_high +1)
     plt.ylim(min(y),max(y))
     plt.grid()
